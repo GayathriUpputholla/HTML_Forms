@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form method="POST">
+            {% csrf_token %}
+            <h1>insert_access</h1>
+           <!---- <label for="n">name</label>-->
+           <label for="web">name</label>
+           <select name="web" id="web">
+
+            {% for wo in  wo%}
+
+
+
+
+            <input type="text" name="n" id="n"><br>
+            <label for="d">date</label>
+            <input type="date" name="d" id="d"><br>
+            <label for="a">authour</label>
+            <input type="text" name="a" id="a"><br>
+            <input type="submit">
+
+        </form>
+    </center>
+    
+</body>
+</html>
