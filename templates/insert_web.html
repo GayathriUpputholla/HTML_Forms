@@ -13,7 +13,7 @@
 
         <label for="topic">topic_name</label>
 
-        <select name="topic" id="topic">
+        <select name="topic" id="topic",multiple>
             
             {% for to in topic %}
             <option value="{{to}}">{{to.topic_name}}</option>

@@ -59,6 +59,26 @@ def insert_access(request):
 
 
 
+def retrive_webpage(request):
+    LTO=Topic.objects.all()
+    d={'LTO':LTO}
+
+
+    if request.method=='POST':
+        MSTS=request.POST.getlist('topic')
+        print(MSTS)
+        Rwos=Webpage.objects.none()
+    
+
+        for i in MSTS:
+            Rwos=Rwos|Webpage.objects.filter(topic_name=i)
+        d1={'Rwos':Rwos}
+        return render(request,'display_webpage.html',d1)
+          
+
+    
+    return render(request,'retrive_webpage.html',d)
+
 
 
 
